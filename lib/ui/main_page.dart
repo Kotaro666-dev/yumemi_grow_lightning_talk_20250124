@@ -6,13 +6,14 @@ class MainPage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     final currentPageIndex = useState(0);
 
     final pages = [
-      Center(child: Text('Home Page', style: Theme.of(context).textTheme.headlineMedium)),
-      Center(child: Text('Notifications Page', style: Theme.of(context).textTheme.headlineMedium)),
-      Center(child: Text('Messages Page', style: Theme.of(context).textTheme.headlineMedium)),
-      Center(child: Text('Settings Page', style: Theme.of(context).textTheme.headlineMedium)),
+      Center(child: Text("Dashboard Page", style: textTheme.headlineMedium)),
+      Center(child: Text('Students Page', style: textTheme.headlineMedium)),
+      Center(child: Text('Chat Page', style: textTheme.headlineMedium)),
+      Center(child: Text('Settings Page', style: textTheme.headlineMedium)),
     ];
 
     return Scaffold(
@@ -27,19 +28,19 @@ class MainPage extends HookWidget {
         selectedIndex: currentPageIndex.value,
         destinations: const [
           NavigationDestination(
-            icon: Icon(Icons.home_outlined),
-            selectedIcon: Icon(Icons.home),
-            label: 'Home',
+            icon: Icon(Icons.list_outlined),
+            selectedIcon: Icon(Icons.list),
+            label: 'Dashboard',
           ),
           NavigationDestination(
-            icon: Icon(Icons.notifications_outlined),
-            selectedIcon: Icon(Icons.notifications),
-            label: 'Notifications',
+            icon: Icon(Icons.groups_outlined),
+            selectedIcon: Icon(Icons.groups),
+            label: 'Students',
           ),
           NavigationDestination(
-            icon: Icon(Icons.message_outlined),
-            selectedIcon: Icon(Icons.message),
-            label: 'Messages',
+            icon: Icon(Icons.chat_outlined),
+            selectedIcon: Icon(Icons.chat),
+            label: 'Chat',
           ),
           NavigationDestination(
             icon: Icon(Icons.settings_outlined),
