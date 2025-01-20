@@ -25,7 +25,6 @@ final List<User> mockUsers = [
   User(
     role: Role.student,
     permissions: [
-      Permission.dashboard,
       Permission.chat,
       Permission.setting,
     ],
