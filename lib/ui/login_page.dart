@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:yumemi_grow_lightning_talk_20250124/domain/model/mock_users.dart';
+import 'package:yumemi_grow_lightning_talk_20250124/domain/model/user.dart';
 import 'package:yumemi_grow_lightning_talk_20250124/ui/main_page.dart';
 
 class LoginPage extends HookWidget {
@@ -7,9 +9,7 @@ class LoginPage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    // User list
-    final List<String> users = ["Alice", "Bob", "Charlie"];
-
+    final users = mockUsers;
     // State for selected user
     final selectedUser = useState(users[0]);
 
@@ -21,7 +21,7 @@ class LoginPage extends HookWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            DropdownMenu<String>(
+            DropdownMenu<User>(
               initialSelection: users[0],
               label: const Text('User'),
               onSelected: (value) {
@@ -29,10 +29,10 @@ class LoginPage extends HookWidget {
                   selectedUser.value = value;
                 }
               },
-              dropdownMenuEntries: users.map<DropdownMenuEntry<String>>((user) {
-                return DropdownMenuEntry<String>(
+              dropdownMenuEntries: users.map<DropdownMenuEntry<User>>((user) {
+                return DropdownMenuEntry<User>(
                   value: user,
-                  label: user,
+                  label: user.name,
                 );
               }).toList(),
             ),
