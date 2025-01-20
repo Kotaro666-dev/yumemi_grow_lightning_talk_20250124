@@ -41,7 +41,11 @@ class LoginPage extends HookWidget {
               onPressed: () {
                 // Go to MainPage.
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const MainPage()),
+                  MaterialPageRoute(
+                    builder: (context) => MainPage(
+                      user: selectedUser.value,
+                    ),
+                  ),
                 );
               },
               child: const Text("Login"),
