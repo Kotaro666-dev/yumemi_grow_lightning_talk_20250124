@@ -30,6 +30,27 @@ class MainPageWithDisabledBottomBar extends HookWidget {
       SettingsPage(),
     ];
 
+    void setInitialPageIndex() {
+      if (isDashboardEnabled) {
+        currentPageIndex.value = 0;
+      } else if (isStudentsEnabled) {
+        currentPageIndex.value = 1;
+      } else if (isChatEnabled) {
+        currentPageIndex.value = 2;
+      } else if (isSettingsEnabled) {
+        currentPageIndex.value = 3;
+      } else {
+        currentPageIndex.value = 3;
+      }
+    }
+
+    useEffect(() {
+      Future.microtask(
+        () => setInitialPageIndex(),
+      );
+      return null;
+    }, []);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Main Page'),
