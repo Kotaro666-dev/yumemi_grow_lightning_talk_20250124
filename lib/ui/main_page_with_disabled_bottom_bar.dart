@@ -54,8 +54,14 @@ class MainPageWithDisabledBottomBar extends HookWidget {
             enabled: isStudentsEnabled,
           ),
           NavigationDestination(
-            icon: Icon(Icons.chat_outlined),
-            selectedIcon: Icon(Icons.chat),
+            icon: Badge.count(
+              count: 3,
+              child: Icon(Icons.chat_outlined),
+            ),
+            selectedIcon: Badge.count(
+              count: 3,
+              child: Icon(Icons.chat),
+            ),
             label: 'Chat',
             enabled: isChatEnabled,
           ),
