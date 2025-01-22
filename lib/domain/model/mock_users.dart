@@ -17,7 +17,6 @@ final List<User> mockUsers = [
     role: Role.professor,
     permissions: [
       Permission.dashboard,
-      Permission.chat,
       Permission.setting,
     ],
     name: 'Professor John',
