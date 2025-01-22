@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yumemi_grow_lightning_talk_20250124/ui/login_page.dart';
+import 'package:yumemi_grow_lightning_talk_20250124/ui/login/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,4 +21,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

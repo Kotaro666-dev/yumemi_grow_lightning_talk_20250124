@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:yumemi_grow_lightning_talk_20250124/domain/model/permission.dart';
 import 'package:yumemi_grow_lightning_talk_20250124/domain/model/user.dart';
-import 'package:yumemi_grow_lightning_talk_20250124/ui/chat_page.dart';
-import 'package:yumemi_grow_lightning_talk_20250124/ui/dashboard_page.dart';
-import 'package:yumemi_grow_lightning_talk_20250124/ui/settings_page.dart';
-import 'package:yumemi_grow_lightning_talk_20250124/ui/students_page.dart';
+import 'package:yumemi_grow_lightning_talk_20250124/ui/chat/chat_page.dart';
+import 'package:yumemi_grow_lightning_talk_20250124/ui/dashboard/dashboard_page.dart';
+import 'package:yumemi_grow_lightning_talk_20250124/ui/settings/settings_page.dart';
+import 'package:yumemi_grow_lightning_talk_20250124/ui/students/students_page.dart';
 
 class MainPageWithDisabledBottomBar extends HookWidget {
   const MainPageWithDisabledBottomBar({
