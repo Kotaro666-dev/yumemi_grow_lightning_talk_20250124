@@ -4,7 +4,7 @@ import 'package:yumemi_grow_lightning_talk_20250124/ui/component/no_permission_b
 class SettingsPage extends StatelessWidget {
   const SettingsPage({
     super.key,
-    bool canAccess = false,
+    bool canAccess = true,
   }) : _canAccess = canAccess;
 
   final bool _canAccess;
