@@ -32,11 +32,15 @@ YOUTRUST x ビビッドガーデン x ゆめみ Flutter LT会@渋谷
 # 前提
 
 - 開発環境：Flutter 3.27.2
+- どんなアプリケーションを開発している？
+  - ログイン後の画面でアカウントに紐づく権限に応じて制御するアプリケーション
 - Material Design 3 の Navigation Bar ウィジェットを使った開発でのお話
 
 ---
 
-![w:300 bg left](../assets/screenshot_assertion_error.png)
+![bg 80% left](../assets/screenshot_login_page.png)
+
+![bg 80% left](../assets/screenshot_assertion_error.png)
 
 # Debug Build Log
 
@@ -149,9 +153,9 @@ The following assertion was thrown building MainPageWithHiddenBottomBar(dirty, u
 
 ## 理由
 
-- デバッグビルドのみで発生する問題
-- Ex-Student Bob アカウントのようなケースがあまりない
-- 権限がなかったら参照できない要件のみを実現する必要性
+- デバッグビルドのみで発生する問題である
+- Ex-Student Bob アカウントのようにナビゲーションバー1つだけしかアクセスできないケースがあまりない
+- 権限がなかったら参照できない要件のみを実現する必要がある
 - 画面ごとに細かな権限対応する必要がない
 
 ---
